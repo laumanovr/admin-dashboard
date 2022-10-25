@@ -29,7 +29,6 @@ const sendRequest = async (method, finalUrl, data) => {
 		const res = await axios(config);
 		return res.data;
 	} catch (err) {
-	  debugger;
 		return Promise.reject(err?.response?.data?.message);
 	}
 };
