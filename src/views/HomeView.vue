@@ -83,10 +83,10 @@ export default {
 	watch: {
 		onSuccess (msg) {
 			this.isLoading = false;
+			this.$toast.success(msg);
+			this.isShowModal = false;
 			if (msg.includes('created')) {
 				this.fetchAllItems();
-				this.$toast.success(msg);
-				this.isShowModal = false;
 			}
 		},
 		onError (msg) {
